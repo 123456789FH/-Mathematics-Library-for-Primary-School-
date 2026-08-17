@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0d756f" />
+  <title>مكتبة الرياضيات للمرحلة الابتدائية</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="badge">📚 مصادر رسمية • وزارة التعليم</div>
+      <h1>مكتبة الرياضيات<br><span>للمرحلة الابتدائية</span></h1>
+      <p>وصول منظم وسريع إلى كتب الرياضيات للصفوف من الأول إلى السادس، للفصلين الدراسيين الأول والثاني.</p>
+      <div class="hero-actions">
+        <button class="primary" id="startBtn">استعرض الكتب</button>
+        <a class="ghost" href="https://www.ien.edu.sa/?choice=2" target="_blank" rel="noopener">فتح عين الإثرائية</a>
+      </div>
+      <div class="stats">
+        <div><strong>٦</strong><span>صفوف</span></div>
+        <div><strong>٢</strong><span>فصلان</span></div>
+        <div><strong>١٢</strong><span>مسار كتاب</span></div>
+      </div>
+    </div>
+    <div class="book-stack" aria-hidden="true">
+      <div class="book b1">رياضيات</div>
+      <div class="book b2">ابتدائي</div>
+      <div class="book b3">١٤٤٨هـ</div>
+      <div class="math-ball">∑</div>
+    </div>
+  </header>
+
+  <main id="library" class="container">
+    <section class="toolbar card-panel">
+      <div class="search-wrap">
+        <span>🔎</span>
+        <input id="search" type="search" placeholder="ابحث: ثالث ابتدائي، الفصل الثاني..." aria-label="البحث في الكتب" />
+      </div>
+      <div class="segmented" role="group" aria-label="تصفية الفصل الدراسي">
+        <button data-semester="all" class="active">الكل</button>
+        <button data-semester="1">الفصل الأول</button>
+        <button data-semester="2">الفصل الثاني</button>
+      </div>
+    </section>
+
+    <section class="section-head">
+      <div>
+        <span class="eyebrow">اختر الصف</span>
+        <h2>كتب الرياضيات</h2>
+      </div>
+      <span id="countLabel" class="count-pill">١٢ كتابًا</span>
+    </section>
+
+    <section id="grid" class="books-grid" aria-live="polite"></section>
+
+    <section class="how card-panel">
+      <div class="how-icon">💡</div>
+      <div>
+        <h3>كيف أصل للكتاب في عين؟</h3>
+        <p>اضغط «فتح من عين»، ثم اختر: <b>تعليم عام ← المرحلة الابتدائية ← الصف المطلوب ← الفصل الدراسي ← الرياضيات</b>.</p>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="detailsDialog">
+    <form method="dialog" class="dialog-card">
+      <button class="close" aria-label="إغلاق">×</button>
+      <div id="dialogContent"></div>
+    </form>
+  </dialog>
+
+  <footer>
+    <div class="footer-logo">∑</div>
+    <div>
+      <strong>مكتبة الرياضيات للمرحلة الابتدائية</strong>
+      <span>روابط الوصول إلى المصدر الرسمي في عين الإثرائية</span>
+    </div>
+    <div class="footer-note">إعداد وتنظيم: أ/ فاطمة هزازي</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
